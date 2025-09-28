@@ -10,5 +10,5 @@ func show_dialog():
 	
 
 
-func _on_body_entered(body: Node2D) -> void:
-	show_dialog()
+#func _on_body_entered(body: Node2D) -> void:
+	#show_dialog()

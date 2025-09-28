@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://d1ajwc46uxvr1"]
+[gd_scene load_steps=46 format=3 uid="uid://d1ajwc46uxvr1"]
 
 [ext_resource type="Script" uid="uid://b0te8r1sjpdst" path="res://scripts/game.gd" id="1_ca42v"]
 [ext_resource type="Script" uid="uid://dbug4mxga2frt" path="res://scripts/game_manager.gd" id="1_p57ef"]
@@ -81,6 +81,12 @@ _data = {
 &"slide_orgi": SubResource("Animation_ir15t")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
+size = Vector2(14, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_264po"]
+size = Vector2(15, 19)
+
 [sub_resource type="Animation" id="Animation_37s47"]
 length = 0.001
 tracks/0/type = "value"
@@ -155,6 +161,9 @@ _data = {
 &"RESET": SubResource("Animation_pl11u"),
 &"move": SubResource("Animation_e1j6l")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
+size = Vector2(15, 20)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqjtg"]
 texture = ExtResource("2_yqjtg")
@@ -438,98 +447,6 @@ gravity = Vector3(0, 98, 0)
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ca42v")
 
-[node name="Player" parent="." instance=ExtResource("3_0tnpc")]
-position = Vector2(154, 67)
-
-[node name="Score" type="Label" parent="Player"]
-unique_name_in_owner = true
-offset_left = 21.0
-offset_top = -44.0
-offset_right = 87.0
-offset_bottom = -21.0
-theme_override_fonts/font = ExtResource("4_u5sy4")
-theme_override_font_sizes/font_size = 8
-text = "Bricks: X"
-autowrap_mode = 2
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, 6)
-zoom = Vector2(4, 4)
-limit_bottom = 180
-limit_smoothed = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D"]
-offset = Vector2(962, 180)
-transform = Transform2D(1, 0, 0, 1, 962, 180)
-
-[node name="Game Over" type="Control" parent="Player/Camera2D/CanvasLayer"]
-unique_name_in_owner = true
-layout_mode = 3
-anchors_preset = 0
-offset_left = 52.0
-offset_top = -116.0
-offset_right = 361.0
-offset_bottom = 35.0
-
-[node name="ColorRect" type="ColorRect" parent="Player/Camera2D/CanvasLayer/Game Over"]
-layout_mode = 0
-offset_left = -1178.0
-offset_top = -95.0
-offset_right = 2216.0
-offset_bottom = 1638.0
-color = Color(0.8117647, 0.4509804, 0.16078432, 0.68235296)
-
-[node name="Label" type="Label" parent="Player/Camera2D/CanvasLayer/Game Over"]
-layout_mode = 0
-offset_left = -196.0
-offset_top = 715.0
-offset_right = 1184.0
-offset_bottom = 875.0
-theme_override_fonts/font = ExtResource("4_u5sy4")
-theme_override_font_sizes/font_size = 160
-text = "GAME OVER"
-
-[node name="You Won" type="Control" parent="Player/Camera2D/CanvasLayer"]
-unique_name_in_owner = true
-layout_mode = 3
-anchors_preset = 0
-offset_left = -89.0
-offset_top = -44.0
-offset_right = -49.0
-offset_bottom = -4.0
-
-[node name="ColorRect" type="ColorRect" parent="Player/Camera2D/CanvasLayer/You Won"]
-layout_mode = 0
-offset_left = -1035.0
-offset_top = -169.0
-offset_right = 2350.0
-offset_bottom = 1555.0
-color = Color(0.8117647, 0.4509804, 0.16078432, 0.68235296)
-
-[node name="Label" type="Label" parent="Player/Camera2D/CanvasLayer/You Won"]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 647.0
-offset_right = 1315.0
-offset_bottom = 807.0
-theme_override_fonts/font = ExtResource("4_u5sy4")
-theme_override_font_sizes/font_size = 160
-text = "YOU WON!!"
-
-[node name="Label2" type="Label" parent="Player/Camera2D/CanvasLayer/You Won"]
-layout_mode = 0
-offset_left = -590.0
-offset_top = 387.0
-offset_right = 1540.0
-offset_bottom = 550.0
-theme_override_fonts/font = ExtResource("2_u5sy4")
-theme_override_font_sizes/font_size = 80
-text = "Great job! 
-You saved your kids with X bricks!"
-horizontal_alignment = 1
-
-[node name="CanvasLayer" parent="Player" instance=ExtResource("6_vtaks")]
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(349.00003, -122.50003)
 scale = Vector2(4.650833, 3.3392847)
@@ -544,44 +461,6 @@ texture = ExtResource("1_trtic")
 position = Vector2(311.98712, 0.124813974)
 scale = Vector2(1.1173625, 1.0059435)
 texture = ExtResource("1_trtic")
-
-[node name="Enemy" type="Node" parent="."]
-
-[node name="Enemy" parent="Enemy" instance=ExtResource("9_0tnpc")]
-position = Vector2(473, 126)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/Enemy"]
-libraries = {
-&"": SubResource("AnimationLibrary_dinhu")
-}
-autoplay = "slide_orgi"
-
-[node name="Enemy2" parent="Enemy" instance=ExtResource("9_0tnpc")]
-position = Vector2(473, 126)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/Enemy2"]
-libraries = {
-&"": SubResource("AnimationLibrary_dinhu")
-}
-autoplay = "slide"
-
-[node name="Enemy3" parent="Enemy" instance=ExtResource("9_0tnpc")]
-position = Vector2(1337, 111)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/Enemy3"]
-libraries = {
-&"": SubResource("AnimationLibrary_bt5mj")
-}
-autoplay = "move"
-
-[node name="Enemy4" parent="Enemy" instance=ExtResource("9_0tnpc")]
-position = Vector2(2345, -34)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/Enemy4"]
-libraries = {
-&"": SubResource("AnimationLibrary_bhx41")
-}
-autoplay = "RESET"
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_p57ef")
@@ -605,6 +484,62 @@ theme_override_fonts/font = ExtResource("2_u5sy4")
 theme_override_font_sizes/font_size = 8
 text = "You collected X bricks"
 autowrap_mode = 2
+
+[node name="Enemy" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemy" instance=ExtResource("9_0tnpc")]
+position = Vector2(473, 126)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/Enemy"]
+libraries = {
+&"": SubResource("AnimationLibrary_dinhu")
+}
+autoplay = "slide_orgi"
+
+[node name="Killzone" parent="Enemy/Enemy" instance=ExtResource("13_kvuet")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy/Killzone"]
+position = Vector2(0, -10.5)
+shape = SubResource("RectangleShape2D_ssvqc")
+
+[node name="Enemy2" parent="Enemy" instance=ExtResource("9_0tnpc")]
+position = Vector2(473, 126)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/Enemy2"]
+libraries = {
+&"": SubResource("AnimationLibrary_dinhu")
+}
+autoplay = "slide"
+
+[node name="Killzone" parent="Enemy/Enemy2" instance=ExtResource("13_kvuet")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy2/Killzone"]
+position = Vector2(865.5, -25.5)
+shape = SubResource("RectangleShape2D_264po")
+
+[node name="Enemy3" parent="Enemy" instance=ExtResource("9_0tnpc")]
+position = Vector2(1337, 111)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/Enemy3"]
+libraries = {
+&"": SubResource("AnimationLibrary_bt5mj")
+}
+autoplay = "move"
+
+[node name="Enemy4" parent="Enemy" instance=ExtResource("9_0tnpc")]
+position = Vector2(2345, -34)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemy/Enemy4"]
+libraries = {
+&"": SubResource("AnimationLibrary_bhx41")
+}
+autoplay = "RESET"
+
+[node name="Killzone" parent="Enemy/Enemy4" instance=ExtResource("13_kvuet")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Enemy4/Killzone"]
+position = Vector2(0.5, -10)
+shape = SubResource("RectangleShape2D_1kice")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(137, 61)
@@ -698,6 +633,15 @@ position = Vector2(1923, -21)
 [node name="Brick27" parent="Bricks" instance=ExtResource("4_lbhrr")]
 position = Vector2(1281, -41)
 
+[node name="Brick28" parent="Bricks" instance=ExtResource("4_lbhrr")]
+position = Vector2(2592, -154)
+
+[node name="Brick29" parent="Bricks" instance=ExtResource("4_lbhrr")]
+position = Vector2(2787, -59)
+
+[node name="Brick30" parent="Bricks" instance=ExtResource("4_lbhrr")]
+position = Vector2(2722, -108)
+
 [node name="Fire Effects" type="Node" parent="."]
 
 [node name="Fire Effect" parent="Fire Effects" instance=ExtResource("3_lnu2h")]
@@ -711,27 +655,6 @@ position = Vector2(3027, -98)
 
 [node name="Fire Effect4" parent="Fire Effects" instance=ExtResource("3_lnu2h")]
 position = Vector2(3106, -98)
-
-[node name="Labels" type="Node" parent="."]
-
-[node name="Label2" type="Label" parent="Labels"]
-offset_left = 667.0
-offset_top = 51.0
-offset_right = 794.0
-offset_bottom = 74.0
-theme_override_fonts/font = ExtResource("2_u5sy4")
-theme_override_font_sizes/font_size = 8
-text = "Keep going forward"
-
-[node name="ScoreLabel" type="Label" parent="Labels"]
-offset_left = 209.0
-offset_top = 28.0
-offset_right = 351.0
-offset_bottom = 58.0
-theme_override_fonts/font = ExtResource("2_u5sy4")
-theme_override_font_sizes/font_size = 8
-text = "Collect bricks to save your kids from the wolves!"
-autowrap_mode = 2
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_gee14")
@@ -788,6 +711,98 @@ shape = SubResource("RectangleShape2D_rysoc")
 [node name="liftUpPlatform3" parent="Platforms" instance=ExtResource("11_kvpfn")]
 position = Vector2(3009, -30)
 
+[node name="Player" parent="." instance=ExtResource("3_0tnpc")]
+position = Vector2(154, 67)
+
+[node name="Score" type="Label" parent="Player"]
+unique_name_in_owner = true
+offset_left = 21.0
+offset_top = -44.0
+offset_right = 87.0
+offset_bottom = -21.0
+theme_override_fonts/font = ExtResource("4_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Bricks: X"
+autowrap_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, 6)
+zoom = Vector2(4, 4)
+limit_bottom = 180
+limit_smoothed = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D"]
+offset = Vector2(962, 180)
+transform = Transform2D(1, 0, 0, 1, 962, 180)
+
+[node name="Game Over" type="Control" parent="Player/Camera2D/CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 52.0
+offset_top = -116.0
+offset_right = 361.0
+offset_bottom = 35.0
+
+[node name="ColorRect" type="ColorRect" parent="Player/Camera2D/CanvasLayer/Game Over"]
+layout_mode = 0
+offset_left = -1178.0
+offset_top = -95.0
+offset_right = 2216.0
+offset_bottom = 1638.0
+color = Color(0.8117647, 0.4509804, 0.16078432, 0.68235296)
+
+[node name="Label" type="Label" parent="Player/Camera2D/CanvasLayer/Game Over"]
+layout_mode = 0
+offset_left = -196.0
+offset_top = 715.0
+offset_right = 1184.0
+offset_bottom = 875.0
+theme_override_fonts/font = ExtResource("4_u5sy4")
+theme_override_font_sizes/font_size = 160
+text = "GAME OVER"
+
+[node name="You Won" type="Control" parent="Player/Camera2D/CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -89.0
+offset_top = -44.0
+offset_right = -49.0
+offset_bottom = -4.0
+
+[node name="ColorRect" type="ColorRect" parent="Player/Camera2D/CanvasLayer/You Won"]
+layout_mode = 0
+offset_left = -1035.0
+offset_top = -169.0
+offset_right = 2350.0
+offset_bottom = 1555.0
+color = Color(0.8117647, 0.4509804, 0.16078432, 0.68235296)
+
+[node name="Label" type="Label" parent="Player/Camera2D/CanvasLayer/You Won"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 647.0
+offset_right = 1315.0
+offset_bottom = 807.0
+theme_override_fonts/font = ExtResource("4_u5sy4")
+theme_override_font_sizes/font_size = 160
+text = "YOU WON!!"
+
+[node name="Label2" type="Label" parent="Player/Camera2D/CanvasLayer/You Won"]
+layout_mode = 0
+offset_left = -590.0
+offset_top = 387.0
+offset_right = 1540.0
+offset_bottom = 550.0
+theme_override_fonts/font = ExtResource("2_u5sy4")
+theme_override_font_sizes/font_size = 80
+text = "Great job! 
+You saved your kids with X bricks!"
+horizontal_alignment = 1
+
+[node name="CanvasLayer" parent="Player" instance=ExtResource("6_vtaks")]
+
 [node name="Killzone" parent="." instance=ExtResource("13_kvuet")]
 position = Vector2(1356, 154)
 
@@ -802,3 +817,33 @@ texture = ExtResource("15_ir15t")
 collision_base_size = 0.1
 visibility_rect = Rect2(-500, -100, 1000, 200)
 process_material = SubResource("ParticleProcessMaterial_trtic")
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 667.0
+offset_top = 51.0
+offset_right = 794.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("2_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Keep going forward"
+
+[node name="ScoreLabel" type="Label" parent="Labels"]
+offset_left = 28.0
+offset_top = 39.0
+offset_right = 170.0
+offset_bottom = 69.0
+theme_override_fonts/font = ExtResource("2_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Collect bricks to save your kids from the wolves!"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = 269.0
+offset_top = 54.0
+offset_right = 587.0
+offset_bottom = 77.0
+theme_override_fonts/font = ExtResource("2_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Be careful of your enemy!"
