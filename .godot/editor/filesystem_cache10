@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1759082939
+::res://::1759087345
 default_bus_layout.tres::AudioBusLayout::529425236487972904::1758995511::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::1827276143519495462::1758981978::1759082744::1::::<><><>0<>0<>f12e2da8dc213488d8290b0945441f3b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 pig.png::CompressedTexture2D::1540843777507612296::1758986725::1759082744::1::::<><><>0<>0<>95f1fcfee725ee9ac13a29f27f45a7ce<>res://.godot/imported/pig.png-27c779637403e465d2e03317ab3cc4a3.ctex::
@@ -41,24 +41,24 @@ platforms.png::CompressedTexture2D::1432210925548182517::1758481144::1759082744:
 slime_green.png::CompressedTexture2D::5562310550149308259::1758481144::1759082744::1::::<><><>0<>0<>b417a420905d3329e9d8979d6bfb9f42<>res://.godot/imported/slime_green.png-16fee34eeb469ab66ac2068f9f2858fd.ctex::
 slime_purple.png::CompressedTexture2D::6906949580490903782::1758481144::1759082744::1::::<><><>0<>0<>c08ca1f1998cf116f96d86f90087fb2b<>res://.godot/imported/slime_purple.png-6cfc0ce4b4b7351d5e5991c1466bffe0.ctex::
 world_tileset.png::CompressedTexture2D::8499836742285801779::1758481144::1759082744::1::::<><><>0<>0<>6e558a70fe8f07b0f19189f48780669d<>res://.godot/imported/world_tileset.png-286c85da862d1dcb286f16c97881806b.ctex::
-::res://scenes/::1759082909
+::res://scenes/::1759085418
 brick.tscn::PackedScene::609551278585466726::1759070373::0::1::::<><><>0<>0<><>::uid://b4jd4wdixpjrh::::res://scripts/brick.gd<>uid://foshnr6lih8v::::res://assets/pixel_bricks_red.png<>uid://dauh6je1a1xtw::::res://assets/sounds copy/coin.wav
 canvas_layer.tscn::PackedScene::1476488817870328252::1759015437::0::1::::<><><>0<>0<><>::uid://csp4awflm430f::::res://assets/sprites copy/heart pixel art 16x16 copy.png
 dialog.tscn::PackedScene::262421074749474919::1759009969::0::1::::<><><>0<>0<><>::uid://js78wjypxcro::::res://assets/fonts copy/PixelOperator8.ttf<>uid://kmnepfsu4wax::::res://scripts/minuspointbutton.gd
-enemy.tscn::PackedScene::6914971902896968065::1759016310::0::1::::<><><>0<>0<><>::uid://1be8auypcdtu::::res://icon.svg<>uid://cxp4r1hs4auad::::res://scripts/enemy.gd
+enemy.tscn::PackedScene::6914971902896968065::1759083126::0::1::::<><><>0<>0<><>::uid://c303syq1yn46j::::res://pixil-frame-0 (4) 2.png<>uid://cxp4r1hs4auad::::res://scripts/enemy.gd
 fire_effect.tscn::PackedScene::8134769662776572840::1758990603::0::1::::<><><>0<>0<><>::uid://qkckieto3wxq::::res://assets/Group 4 - 1/Group 4 - 1.png
-game.tscn::PackedScene::8984757877351133128::1759082909::0::1::::<><><>0<>0<><>::uid://b0te8r1sjpdst::::res://scripts/game.gd<>uid://dbug4mxga2frt::::res://scripts/game_manager.gd<>uid://blq5wi670j40w::::res://assets/volcano background.jpeg<>uid://js78wjypxcro::::res://assets/fonts copy/PixelOperator8.ttf<>uid://dtdncmd6dus80::::res://assets/sprites copy/world_tileset.png<>uid://b6rtppco6yaf6::::res://scenes/player.tscn<>uid://dn5sp53bbwslk::::res://scenes/fire_effect.tscn<>uid://ixjhq5uoln47::::res://scenes/brick.tscn<>uid://0q2tpaghfflr::::res://assets/fonts copy/PixelOperator8-Bold.ttf<>uid://vbhs4ye7yxqa::::res://scenes/canvas_layer.tscn<>uid://do4fk6jxew1hn::::res://assets/music copy/time_for_adventure.mp3<>uid://c5rwtu7p7rokn::::res://scenes/enemy.tscn<>uid://bobqoerbqvur3::::res://scenes/lift_up_platform.tscn<>uid://dnjc5mdc1u2ty::::res://scenes/move_left_right_platform.tscn<>uid://dfvwgp15tkw7e::::res://scenes/killzone.tscn<>uid://cas6s1a24gx6b::::res://assets/Group 4 - 1/Group 4 - 1_1.png<>uid://ch6hhk1vgox1u::::res://scripts/win.tscn
+game.tscn::PackedScene::8984757877351133128::1759085418::0::1::::<><><>0<>0<><>::uid://b0te8r1sjpdst::::res://scripts/game.gd<>uid://dbug4mxga2frt::::res://scripts/game_manager.gd<>uid://blq5wi670j40w::::res://assets/volcano background.jpeg<>uid://js78wjypxcro::::res://assets/fonts copy/PixelOperator8.ttf<>uid://dtdncmd6dus80::::res://assets/sprites copy/world_tileset.png<>uid://b6rtppco6yaf6::::res://scenes/player.tscn<>uid://dn5sp53bbwslk::::res://scenes/fire_effect.tscn<>uid://ixjhq5uoln47::::res://scenes/brick.tscn<>uid://0q2tpaghfflr::::res://assets/fonts copy/PixelOperator8-Bold.ttf<>uid://vbhs4ye7yxqa::::res://scenes/canvas_layer.tscn<>uid://do4fk6jxew1hn::::res://assets/music copy/time_for_adventure.mp3<>uid://c5rwtu7p7rokn::::res://scenes/enemy.tscn<>uid://bobqoerbqvur3::::res://scenes/lift_up_platform.tscn<>uid://dnjc5mdc1u2ty::::res://scenes/move_left_right_platform.tscn<>uid://dfvwgp15tkw7e::::res://scenes/killzone.tscn<>uid://cas6s1a24gx6b::::res://assets/Group 4 - 1/Group 4 - 1_1.png<>uid://ch6hhk1vgox1u::::res://scripts/win.tscn
 game_manager.tscn::PackedScene::144331703225602917::1758994675::0::1::::<><><>0<>0<><>::
 killzone.tscn::PackedScene::7554905520113051612::1759064542::0::1::::<><><>0<>0<><>::uid://bcjv2f18qlbbe::::res://scripts/killzone.gd
 lift_up_platform.tscn::PackedScene::3372125581801287734::1759069354::0::1::::<><><>0<>0<><>::uid://un1kmh0dbmi4::::res://assets/sprites copy/platforms.png
 move_left_right_platform.tscn::PackedScene::8090472061003990474::1759063010::0::1::::<><><>0<>0<><>::uid://un1kmh0dbmi4::::res://assets/sprites copy/platforms.png
 player.tscn::PackedScene::4598550459680584249::1759014280::0::1::::<><><>0<>0<><>::uid://csdupc86vyxpk::::res://scripts/player.gd<>uid://dlo67cf10nftm::::res://assets/sprites copy/defaultAnimation copy.tres
 won.tscn::PackedScene::8469921784232365845::1759078663::0::1::::<><><>0<>0<><>::uid://oop375yit5o8::::res://scripts/area_2d.gd
-::res://scripts/::1759082715
+::res://scripts/::1759083057
 area_2d.gd::GDScript::1012507584803384205::1759078731::0::1::::<>Area2D<><>0<>0<><>::
 brick.gd::GDScript::4440711648527055637::1759010375::0::1::::<>Area2D<><>0<>0<><>::
 dialog.gd::GDScript::3580140604862976119::1759009392::0::1::::<>Control<><>0<>0<><>::
-enemy.gd::GDScript::6419942965935803427::1759009785::0::1::::<>Area2D<><>0<>0<><>::
+enemy.gd::GDScript::6419942965935803427::1759083052::0::1::::<>Area2D<><>0<>0<><>::
 game.gd::GDScript::4180667685033299403::1759079329::0::1::::<>Node2D<><>0<>0<><>::
 game_manager.gd::GDScript::7271155205862755265::1759081920::0::1::::<>Node<><>0<>0<><>::
 killzone.gd::GDScript::2546701348342081186::1759071523::0::1::::<>Area2D<><>0<>0<><>::
